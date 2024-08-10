@@ -1,16 +1,15 @@
 import React, { useState } from "react";
-import SignupScreen from "../SignupScreen/SignupScreen";
 import "./LoginScreen.css";
-
+import Signup from './Signup'
 const LoginScreen = () => {
   const [signIn, setSignIn] = useState(false);
-
+  console.log(signIn)
   return (
     <div className="loginScreen">
       <div className="loginScreen__background">
         <img
           className="loginScreen__logo"
-          src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1920px-Netflix_2015_logo.svg.png"
           alt=""
         />
         <button className="loginScreen__button" onClick={() => setSignIn(true)}>
@@ -22,7 +21,7 @@ const LoginScreen = () => {
 
       <div className="loginScreen__body">
         {signIn ? (
-          <SignupScreen />
+          <Signup/>
         ) : (
           <>
             <h1>Unlimited films, TV programmes and more.</h1>

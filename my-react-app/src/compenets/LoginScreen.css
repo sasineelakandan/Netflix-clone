@@ -8,9 +8,10 @@
   }
   
   .loginScreen__logo {
+    margin-top: 20px;
     position: fixed;
     left: 0;
-    width: 150px;
+    width: 110px;
     object-fit: contain;
     padding-left: 20px;
   }
