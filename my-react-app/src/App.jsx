@@ -1,14 +1,21 @@
 import React from 'react'
-import Navbar from './compenets/Navbar'
-import Homescreen from './pages/Homescreen'
-import Banner from './compenets/ Banner'
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import HomeScreen from './pages/Homescreen';
+import './App.css'
+
 
 const App = () => {
   return (
     <div>
-      <Navbar/>
-      <Homescreen/>
-      <Banner/>
+    <Router>
+      <Routes>
+      <Route path='/' element={<HomeScreen/>}> </Route>
+      
+      </Routes>
+    
+      </Router>  
+  
+     
     </div>
   )
 }

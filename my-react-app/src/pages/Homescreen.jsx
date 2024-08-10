@@ -1,14 +1,32 @@
-import React from 'react'
-import Banner from '../compenets/ Banner'
 
-const Homescreen = () => {
+import React from "react";
+import Banner from "../compenets/ Banner";
+import Nav from "../compenets/Navbar";
+
+import requests from "../compenets/helper/request";
+import Row from "../compenets/Rowpost";
+
+const HomeScreen = () => {
   return (
-    <div className='home' >
-     <div>
-        <Banner/>
-        </div>   
-    </div>
-  )
-}
+    <div className="homeScreen">
+      <Nav />
 
-export default Homescreen
+      <Banner />
+
+      <Row
+        title="NETFLIX ORIGINALS"
+        fetchUrl={requests.fetchNetflixOriginals}
+        isLargeRow
+      />
+      <Row title="Trending Now" fetchUrl={requests.fetchTrending} />
+      <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
+      <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
+      <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} />
+      <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
+      <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
+      <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} />
+    </div>
+  );
+};
+
+export default HomeScreen;
