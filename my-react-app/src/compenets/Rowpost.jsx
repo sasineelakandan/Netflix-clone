@@ -38,7 +38,7 @@ const Row = ({ title, fetchUrl, isLargeRow = false }) => {
       console.error("Error fetching movie video: ", error);
     }
   };
-  console.log(url)
+  
   
   return (
     <div className="row">
